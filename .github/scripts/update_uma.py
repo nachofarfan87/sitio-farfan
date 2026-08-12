@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Lee el valor del UMA del sitio del Colegio de Abogados de Jujuy y actualiza
 honorarios/uma.json si cambió. Corre en GitHub Actions: desde un servidor no hay
-CORS, así que la lectura es directa y no depende de proxies de terceros."""
+CORS, así que la lectura es directa y no depende de proxies de terceros.
+
+Vive dentro de .github/ a propósito: Netlify publica la raíz del repo tal cual,
+y las carpetas que empiezan con punto no se sirven. Así el script queda fuera
+del sitio sin necesidad de reglas de redirección."""
 import json
 import re
 import sys
@@ -10,7 +14,7 @@ import pathlib
 import urllib.request
 
 SITE = "https://colabogadosjujuy.com.ar/"
-UMA_JSON = pathlib.Path(__file__).resolve().parent.parent / "honorarios" / "uma.json"
+UMA_JSON = pathlib.Path(__file__).resolve().parents[2] / "honorarios" / "uma.json"
 
 
 def fetch(url):

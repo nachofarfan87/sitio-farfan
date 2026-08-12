@@ -20,6 +20,14 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# Sin esto Netlify lo sirve como application/octet-stream y el manifiesto
+# queda en zona gris para instalar la página en el teléfono.
+[[headers]]
+  for = "/honorarios/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+    Cache-Control = "public, max-age=3600"
+
 [[headers]]
   for = "/*.jpg"
   [headers.values]

@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Leer el valor del UMA y actualizar honorarios/uma.json
-        run: python3 scripts/update_uma.py
+        run: python3 .github/scripts/update_uma.py
 
       - name: Publicar si cambió
         run: |
