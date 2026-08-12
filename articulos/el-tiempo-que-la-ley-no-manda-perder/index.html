@@ -365,5 +365,14 @@ a:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:
   </div>
 </footer>
 
+<script>
+// Medición de los clics a WhatsApp. Si Plausible no está, no hace nada.
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest('a[href*="wa.me"]');
+  if (!a || typeof window.plausible !== "function"){ return; }
+  try { window.plausible("WhatsApp", { props:{ origen:"cierre", pagina:"articulo" } }); } catch(err){}
+});
+</script>
+
 </body>
 </html>

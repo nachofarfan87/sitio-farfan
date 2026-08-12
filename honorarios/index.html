@@ -670,7 +670,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
   const UMA_FALLBACK = 53620;                 // valor de respaldo
   // WhatsApp del estudio. Formato internacional para móviles argentinos: 54 + 9 + área + número.
   const WA = '5493885800175';
-  const CACHE_TTL_MS = 12 * 60 * 60 * 1000;   // 12 horas
   const SITE_URL = 'https://colabogadosjujuy.com.ar/';
   const GEMINI_MODEL = 'gemini-2.0-flash';
   const LS = { key:'hjf_gemini_key', cache:'hjf_cache', history:'hjf_history' };
@@ -1117,24 +1116,30 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
   }
 
   // ===================== Orquestador =====================
+  // uma.json manda: lo verifica todos los días el Action del repo, leyendo el
+  // sitio del Colegio desde un servidor, sin CORS y sin intermediarios. Salir a
+  // la web desde el navegador del visitante cuesta medio megabyte por proxy y a
+  // veces se cuelga, así que eso queda para cuando el valor quedó viejo o para
+  // cuando alguien toca "Actualizar" a propósito.
   async function resolveValue({ force = false } = {}){
-    const c = getCache();
-
-    // "Actualizar": consulta en vivo con indicador de carga
     if (force){ await refreshLive({ showLoading:true }); return; }
 
-    // Carga normal: pintar al instante lo que haya (caché o valor base del sitio)
+    // Pintar al instante lo último visto, para no dejar la ficha en blanco
+    const c = getCache();
     if (c && c.valor){
       applyValue(c.valor, c.mes, c.source || 'oficial', c.ts, true, c.vencido);
-    } else {
-      const base = await fetchBase();
-      if (base) commit(base.valor, base.mes, 'oficial', base.vencido);
-      else applyValue(UMA_FALLBACK, '', 'fallback', Date.now(), false, false);
     }
 
-    // Refresco silencioso desde el sitio oficial, salvo que la caché sea fresca (< 12 h)
-    const fresh = c && c.valor && (Date.now() - c.ts) < CACHE_TTL_MS;
-    if (!fresh) refreshLive({ showLoading:false });
+    const base = await fetchBase();
+    if (base){
+      commit(base.valor, base.mes, 'oficial', base.vencido);
+      if (base.vencido) refreshLive({ showLoading:false });   // sólo si quedó viejo
+      return;
+    }
+
+    // Sin uma.json (offline y sin caché): respaldo, e intento en vivo
+    if (!c || !c.valor) applyValue(UMA_FALLBACK, '', 'fallback', Date.now(), false, false);
+    refreshLive({ showLoading:false });
   }
 
   // Busca el valor más actual: sitio oficial -> (Gemini solo si el dueño cargó clave) -> base.
@@ -1218,6 +1223,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 
   $('btnResetKey').addEventListener('click', () => {
     clearKey(); refreshKeyStatus(); toast('Clave borrada de este dispositivo.');
+  });
+
+  // Medición: de qué parte del arancel sale el contacto. Si Plausible no está
+  // cargado (o lo bloquea una extensión), esto no hace nada y el clic sigue igual.
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[href*="wa.me"]');
+    if (!a || typeof window.plausible !== 'function') return;
+    const origen = a.id ? a.id.replace(/^wa-/, '') : 'otro';
+    try { window.plausible('WhatsApp', { props:{ origen, pagina:'honorarios' } }); } catch(err){}
   });
 
   window.addEventListener('online',  () => toast('Conexión restablecida.'));
