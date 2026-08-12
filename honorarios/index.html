@@ -903,12 +903,57 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     const m = (location.hash || '').match(/^#area-([a-z0-9_-]+)$/i);
     return m ? m[1] : '';
   }
+  // scrollIntoView no sirve acá: con scroll-behavior:smooth en el CSS, el
+  // re-render del catálogo cancela la animación y la vista se queda arriba.
+  // Con coordenadas y behavior explícito, el salto es firme.
+  const TOPE = 72;   // alto del encabezado fijo
+  function objetivoDe(area){
+    const el = $('area-' + area);
+    return el ? Math.max(0, el.getBoundingClientRect().top + window.scrollY - TOPE) : null;
+  }
+
+  // Al entrar por enlace de materia hay que reafirmar la posición: lo que está
+  // arriba del catálogo (tipografías, montos, botón de instalar) sigue cambiando
+  // de alto después del primer render y se lleva la vista puesta. Se abandona
+  // apenas el visitante toca algo, para no pelearle el scroll.
+  function anclarEnArea(area){
+    const hasta = Date.now() + 2000;
+    let ultima = -1, cancelado = false;
+    const cancelar = () => { cancelado = true; };
+    ['wheel','touchstart','keydown','mousedown'].forEach((ev) =>
+      window.addEventListener(ev, cancelar, { once:true, passive:true }));
+
+    const ajustar = () => {
+      if (cancelado || Date.now() > hasta) return false;
+      const y = objetivoDe(area);
+      if (y != null && Math.abs(y - ultima) > 1){
+        window.scrollTo({ top:y, behavior:'instant' });
+        ultima = y;
+      }
+      return true;
+    };
+
+    ajustar();                                    // ya mismo, sin esperar un cuadro
+    const paso = () => { if (ajustar()) requestAnimationFrame(paso); };
+    requestAnimationFrame(paso);                  // mientras la pestaña se dibuja
+
+    // Los dos saltos de alto que se llevan la vista puesta. Llegan aunque la
+    // pestaña esté en segundo plano, donde requestAnimationFrame no corre.
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(ajustar);
+    window.addEventListener('load', ajustar, { once:true });
+    setTimeout(ajustar, 400);
+    setTimeout(ajustar, 1200);
+  }
+
   function irAlArea(area){
     if (!area) return;
+    // Abrir también en el DOM: el render que sigue sincroniza el estado desde ahí
+    // y, si el panel figura cerrado, descarta el área que acabamos de sumar.
+    const el = $('area-' + area);
+    if (el) el.open = true;
     areasAbiertas.add(area);
     renderServicios();
-    const el = $('area-' + area);
-    if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
+    anclarEnArea(area);
   }
 
   async function loadServicios(){
@@ -920,10 +965,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       const area = areaDelHash();
       if (area) areasAbiertas.add(area);       // llega abierta, sin parpadeo
       renderServicios();
-      if (area){
-        const el = $('area-' + area);
-        if (el) el.scrollIntoView({ behavior:'auto', block:'start' });
-      }
+      if (area) anclarEnArea(area);
     } catch(e){}
   }
 
