@@ -1,7 +1,7 @@
 # Sitio estático sin compilación: Netlify publica la raíz del repo tal cual.
+# Sin build command a propósito; no hay nada que compilar.
 [build]
   publish = "."
-  command = ""
 
 # Cabeceras: el HTML nunca se cachea (para que un deploy se vea al instante),
 # los datos del arancel poco, y las imágenes mucho.
