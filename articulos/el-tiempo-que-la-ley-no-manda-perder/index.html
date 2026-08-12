@@ -154,6 +154,11 @@ a{color:inherit;text-decoration:none}
 .doc-cta .k{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-soft)}
 .doc-cta h2{font-family:"Fraunces",serif;font-weight:360;font-size:clamp(1.5rem,1.1rem + 1.4vw,2.1rem);line-height:1.1;color:var(--bone);max-width:22ch}
 .doc-cta p{color:rgba(251,248,241,.78);max-width:48ch}
+.doc-cta p a{color:var(--brass-soft);border-bottom:1px solid var(--brass-line)}
+.doc-cta p a:hover{border-bottom-color:var(--brass)}
+.cta-actions{display:flex;flex-wrap:wrap;gap:.9rem}
+.btn-ghost{background:transparent;color:var(--bone);border-color:rgba(251,248,241,.4)}
+.btn-ghost:hover{border-color:var(--brass-soft);color:var(--brass-soft)}
 .btn{font-family:"IBM Plex Mono",monospace;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;
   display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.65em;border:1px solid;justify-self:start;
   transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease);cursor:pointer}
@@ -168,6 +173,13 @@ a{color:inherit;text-decoration:none}
 .foot-back{font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-ink);display:inline-flex;gap:.5em;align-items:center}
 .foot-back .arr{transition:transform .3s var(--ease)}
 .foot-back:hover .arr{transform:translateX(-4px)}
+.foot-links{display:flex;flex-wrap:wrap;gap:.8rem 2rem;align-items:center}
+.foot-fwd{font-family:"IBM Plex Mono",monospace;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--brass-ink);display:inline-flex;gap:.5em;align-items:center;
+  border-bottom:1px solid var(--brass-line);padding-bottom:.15rem}
+.foot-fwd .arr{transition:transform .3s var(--ease)}
+.foot-fwd:hover{border-bottom-color:var(--brass)}
+.foot-fwd:hover .arr{transform:translateX(4px)}
 .foot-firm{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.08em;color:var(--text-soft)}
 
 a:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:1px}
@@ -189,6 +201,7 @@ a:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:
     <a class="brand" href="/" aria-label="Estudio Jurídico Farfán, inicio">Farfán <small>est. 1953</small></a>
     <div class="head-side">
       <a class="head-back" href="/#articulos">← Doctrina</a>
+      <a class="head-back" href="/honorarios/">Honorarios</a>
       <a class="head-cta" href="/#contacto">Consulta</a>
     </div>
   </div>
@@ -330,8 +343,11 @@ a:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:
       <aside class="doc-cta">
         <span class="k">Del estudio a su caso</span>
         <h2>¿Su situación roza esta cuestión?</h2>
-        <p>Si atraviesa un trámite donde este tipo de prácticas le hace perder tiempo o dinero, conversémoslo. La primera consulta es sin cargo.</p>
-        <a class="btn btn-brass" href="/#contacto">Solicitar una consulta <span class="arr">→</span></a>
+        <p>Si atraviesa un trámite donde este tipo de prácticas le hace perder tiempo o dinero, conversémoslo. La primera conversación es sin cargo, y los <a href="/honorarios/">honorarios están publicados</a>.</p>
+        <div class="cta-actions">
+          <a class="btn btn-brass" href="https://wa.me/5493885800175?text=Hola.%20Le%20escribo%20a%20partir%20del%20art%C3%ADculo%20publicado%20en%20la%20web." target="_blank" rel="noopener">Escribir por WhatsApp <span class="arr">→</span></a>
+          <a class="btn btn-ghost" href="/#contacto">Enviar el formulario</a>
+        </div>
       </aside>
 
     </article>
@@ -341,7 +357,10 @@ a:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:
 
 <footer class="doc-foot">
   <div class="reading">
-    <a class="foot-back" href="/#articulos"><span class="arr">←</span> Volver a Doctrina</a>
+    <div class="foot-links">
+      <a class="foot-back" href="/#articulos"><span class="arr">←</span> Volver a Doctrina</a>
+      <a class="foot-fwd" href="/honorarios/">Honorarios <span class="arr">→</span></a>
+    </div>
     <span class="foot-firm">Estudio Jurídico Farfán · M.P. 4692</span>
   </div>
 </footer>
