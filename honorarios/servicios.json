@@ -1,0 +1,145 @@
+{
+  "areas": [
+    {
+      "id": "contencioso",
+      "nombre": "Contencioso Administrativo",
+      "color": "#6E1F2A",
+      "servicios": [
+        { "nombre": "Etapa Preliminar Administrativa", "umas": 6.5 },
+        { "nombre": "Ordinario de Plena Jurisdicción", "umas": 31.8 },
+        { "nombre": "Apelación Juez de Faltas", "umas": 24.09 },
+        { "nombre": "Amparo por Mora Administrativa", "umas": 15.9 },
+        { "nombre": "Amparo por Denegación", "umas": 22.26 },
+        { "nombre": "Amparo Genérico", "umas": 22.26 },
+        { "nombre": "Amparo Der. Colectivo de Consumidor", "umas": 27.03 },
+        { "nombre": "Amparo Der. Colectivo Ambiental", "umas": 27.03 },
+        { "nombre": "Mandamus de Ejecución", "umas": 23.85 },
+        { "nombre": "Recurso de Revocatoria", "umas": 7.95 },
+        { "nombre": "Recurso de Reclamo ante el Cuerpo", "umas": 12.77 },
+        { "nombre": "Recurso de Casación", "umas": 19.08 },
+        { "nombre": "Recurso Extraordinario Federal", "umas": 23.85 },
+        { "nombre": "Rec. de Queja por Denegación de R.F.F", "umas": 23.85 }
+      ]
+    },
+    {
+      "id": "civil",
+      "nombre": "Fuero Civil y Comercial",
+      "color": "#6E1F2A",
+      "servicios": [
+        { "nombre": "Prescripción Adquisitiva de Automotor", "umas": 39.75 },
+        { "nombre": "Prescripción Adquisitiva de Inmueble", "umas": 111.30 },
+        { "nombre": "Interdictos", "umas": 39.75 },
+        { "nombre": "Reinvidicación de Inmuebles", "umas": 95.40 },
+        { "nombre": "Apertura de Juicio Sucesorio", "umas": 24.53 },
+        { "nombre": "Declaratoria de Herederos", "umas": 24.53 },
+        { "nombre": "Desalojos", "umas": 31.80 },
+        { "nombre": "Administración de Sucesorios", "umas": 31.80 },
+        { "nombre": "Cobro de Alquileres", "umas": 28.67 },
+        { "nombre": "Cumplimiento de Contrato", "umas": 31.80 },
+        { "nombre": "Daños y Perjuicios", "umas": 39.75 },
+        { "nombre": "División de Condominio", "umas": 63.60 },
+        { "nombre": "Patrocinio Ley 22,172", "umas": 4.77 },
+        { "nombre": "Escrituración", "umas": 47.70 },
+        { "nombre": "Restitución de Bienes", "umas": 23.85 },
+        { "nombre": "Defensa del Consumidor Sumarisimo", "umas": 23.85 },
+        { "nombre": "Constitución de S.A.", "umas": 47.70 },
+        { "nombre": "Constitución de S.R.L./Fundación/Asociación", "umas": 39.75 },
+        { "nombre": "Acciones Societarias - Impuganción de Asamblea", "umas": 27.46 },
+        { "nombre": "Presentación de Trámite de Quiebra", "umas": 63.60 },
+        { "nombre": "Presentación de Trámite de Consurso", "umas": 63.60 },
+        { "nombre": "Verificación de Créditos", "umas": 15.90 },
+        { "nombre": "Homologación de Convenios", "umas": 19.08 },
+        { "nombre": "Juicio Ejecutivo", "umas": null, "nota": "15% sin excepciones / 20% con excepciones del monto de la sentencia" }
+      ]
+    },
+    {
+      "id": "familia",
+      "nombre": "Fuero de Familia",
+      "color": "#6E1F2A",
+      "servicios": [
+        { "nombre": "Divorcio", "umas": 23.85 },
+        { "nombre": "Alimentos", "umas": 12.77 },
+        { "nombre": "Cesación/Reducción de Cuota Alimentaria", "umas": 9.83 },
+        { "nombre": "Aumento de Cuota Alimentaria", "umas": 12.77 },
+        { "nombre": "Cuidado Personal", "umas": 19.08 },
+        { "nombre": "Determinación de Capacidad Jurídica", "umas": 15.90 },
+        { "nombre": "Ofrecimiento de Cuota Alim.", "umas": 9.59 },
+        { "nombre": "Pago por Consignación", "umas": 9.59 },
+        { "nombre": "Adopción Simple", "umas": 24.53 },
+        { "nombre": "Adopción Plena", "umas": 31.80 },
+        { "nombre": "Autorización Judicial de Viaje", "umas": 9.83 },
+        { "nombre": "Responsabilidad Parental", "umas": 23.85 },
+        { "nombre": "Régimen Comunicacional", "umas": 19.08 },
+        { "nombre": "Ejecución de Cuota/Convenio", "umas": 8.05 },
+        { "nombre": "Guarda Delegada", "umas": 15.90 },
+        { "nombre": "Guarda con Fines de Adopción", "umas": 31.80 },
+        { "nombre": "Liquidación de Comunidad Conyugal", "umas": null, "nota": "30% Valor de Bienes" },
+        { "nombre": "Tutela Curatela/Designación de Curador", "umas": 19.08 },
+        { "nombre": "Impugnación de Reconocimiento", "umas": 31.80 },
+        { "nombre": "Filiación", "umas": 31.80 },
+        { "nombre": "Homologación de Convenio", "umas": 12.77 },
+        { "nombre": "Pedido de Audiencia de Avenimiento", "umas": 9.59 }
+      ]
+    },
+    {
+      "id": "contratos",
+      "nombre": "Redacción de Contratos y Denuncias",
+      "color": "#6E1F2A",
+      "servicios": [
+        { "nombre": "Locación", "umas": 9.60, "nota": "o 20% del valor total del contrato" },
+        { "nombre": "Boleto de Compra y Venta", "umas": 5.73, "nota": "o 20% del valor total del contrato" },
+        { "nombre": "Otros Contratos", "umas": 9.60, "nota": "o 20% del valor total del contrato" },
+        { "nombre": "Estatutos", "umas": 28.63 },
+        { "nombre": "Denuncia Penal Sin Firma", "umas": 7.65 },
+        { "nombre": "Denuncia Penal Con Firma", "umas": 9.60 },
+        { "nombre": "Carta Documento con Firma", "umas": 5.45 },
+        { "nombre": "Carta Documento sin Firma", "umas": 4.68 },
+        { "nombre": "Información Sumaria", "umas": 14.49 },
+        { "nombre": "Amparo de Salud", "umas": 27.37 }
+      ]
+    },
+    {
+      "id": "penal",
+      "nombre": "Fuero Penal",
+      "color": "#6E1F2A",
+      "servicios": [
+        { "nombre": "Diligencias Preliminares y Policiales", "umas": 7.05 },
+        { "nombre": "Asumir el Cargo de Defensor Penal", "umas": 35.25 },
+        { "nombre": "Cese de Detención o Mantenimiento de Libertad", "umas": 21.15 },
+        { "nombre": "Juicio Oral", "umas": 56.39 },
+        { "nombre": "Recurso de Apelación", "umas": 35.39 },
+        { "nombre": "Recurso de Casación", "umas": 56.39 },
+        { "nombre": "Queja por Recurso Denegado", "umas": 21.15 },
+        { "nombre": "Recurso Extraordinario", "umas": 112.79 },
+        { "nombre": "Mediación Penal Exitosa", "umas": 16.97 },
+        { "nombre": "Etapa para Ejecución Penal", "umas": 16.33 },
+        { "nombre": "Juicio Abreviado", "umas": 27.22 },
+        { "nombre": "Suspensión de Juicio a Prueba", "umas": 32.67 },
+        { "nombre": "Habeas Corpus", "umas": 23.85 }
+      ]
+    },
+    {
+      "id": "laboral",
+      "nombre": "Fuero Laboral",
+      "color": "#6E1F2A",
+      "servicios": [
+        { "nombre": "Contestación de Demanda", "umas": 28.62 },
+        { "nombre": "Audiencia de Vista de Causa", "umas": 23.85 },
+        { "nombre": "Acuerdo Transaccional", "umas": null, "nota": "15% del Monto" },
+        { "nombre": "Recurso de Inconstitucionalidad", "umas": 23.51 },
+        { "nombre": "Demanda de Exclusión de Tutela Sindical", "umas": 28.62 }
+      ]
+    },
+    {
+      "id": "genero",
+      "nombre": "Fuero de Violencia de Género y Familiar",
+      "color": "#6E1F2A",
+      "servicios": [
+        { "nombre": "Amparo", "umas": 14.55 },
+        { "nombre": "Protección de Persona", "umas": 17.49 },
+        { "nombre": "Exclusión del Hogar", "umas": 17.49 },
+        { "nombre": "Audiencia de Violencia Familiar", "umas": 8.77 }
+      ]
+    }
+  ]
+}

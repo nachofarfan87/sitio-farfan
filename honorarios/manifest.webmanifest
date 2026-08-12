@@ -1,0 +1,17 @@
+{
+  "name": "Arancel — Estudio Jurídico Farfán",
+  "short_name": "Arancel JF",
+  "description": "Honorarios de consulta y de trámites según el valor vigente del UMA del Colegio de Abogados de Jujuy.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ECE3D0",
+  "theme_color": "#15251C",
+  "lang": "es-AR",
+  "icons": [
+    { "src": "icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icono.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icono.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

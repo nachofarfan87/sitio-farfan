@@ -1,0 +1,31 @@
+# Sitio estático sin compilación: Netlify publica la raíz del repo tal cual.
+[build]
+  publish = "."
+  command = ""
+
+# Cabeceras: el HTML nunca se cachea (para que un deploy se vea al instante),
+# los datos del arancel poco, y las imágenes mucho.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/honorarios/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/honorarios/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/honorarios/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
