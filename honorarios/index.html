@@ -35,6 +35,7 @@
   "url": "https://estudiofarfan.netlify.app/honorarios/",
   "areaServed": { "@type": "AdministrativeArea", "name": "Jujuy, Argentina" },
   "address": { "@type": "PostalAddress", "streetAddress": "Carrizo N° 672", "addressRegion": "Jujuy", "addressCountry": "AR" },
+  "telephone": "+543885800175",
   "email": "juanignaciofarfan@gmail.com",
   "founder": { "@type": "Person", "name": "Ciro Alberto Farfán" },
   "foundingDate": "1953",
@@ -207,6 +208,11 @@ a{color:inherit;text-decoration:none}
 .card .monto{margin-top:.9rem;font-family:"Fraunces",serif;font-weight:340;font-variation-settings:"opsz" 144;
   font-size:clamp(1.7rem,1.2rem + 1.6vw,2.3rem);line-height:1;letter-spacing:-.025em;color:var(--ink-2)}
 .card .desc{margin-top:.8rem;font-size:.94rem;color:var(--text-soft);line-height:1.5}
+.card-wa{margin-top:auto;padding-top:1.2rem;display:inline-flex;align-items:center;gap:.5em;align-self:flex-start;
+  font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-ink)}
+.card-wa .arr{transition:transform .3s var(--ease)}
+.card-wa:hover{color:var(--ink)}
+.card-wa:hover .arr{transform:translateX(4px)}
 
 /* ============ BUSCADOR ============ */
 .catalog-search{position:relative;max-width:32rem}
@@ -298,7 +304,11 @@ tbody td:first-child{font-family:"Fraunces",serif;font-size:1rem;color:var(--ink
 .doc-cta h2{font-family:"Fraunces",serif;font-weight:360;font-size:clamp(1.5rem,1.1rem + 1.4vw,2.1rem);line-height:1.1;color:var(--bone);max-width:24ch}
 .doc-cta h2 em{font-style:italic;color:var(--brass-soft)}
 .doc-cta p{color:rgba(251,248,241,.78);max-width:52ch}
+.doc-cta p a{color:var(--brass-soft);border-bottom:1px solid var(--brass-line)}
+.doc-cta p a:hover{border-bottom-color:var(--brass)}
 .cta-actions{margin-top:.4rem;display:flex;flex-wrap:wrap;gap:.9rem}
+.cta-tel{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.08em;color:rgba(251,248,241,.55)!important}
+.cta-tel a{color:var(--brass-soft)}
 
 /* ============ FOOTER ============ */
 .site-foot{background:var(--ink-2);color:rgba(251,248,241,.7);padding-block:clamp(3rem,5vw,4.2rem) 1.8rem;margin-top:clamp(3rem,6vw,5rem)}
@@ -444,18 +454,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
           <h3>Consulta virtual</h3>
           <div class="monto" id="monto-virtual">—</div>
           <p class="desc">Por videollamada, desde donde esté.</p>
+          <a class="card-wa" id="wa-virtual" href="https://wa.me/5493885800175" target="_blank" rel="noopener">Coordinar por WhatsApp <span class="arr" aria-hidden="true">→</span></a>
         </article>
         <article class="card">
           <span class="tag">5 UMA</span>
           <h3>Consulta oral</h3>
           <div class="monto" id="monto-oral">—</div>
           <p class="desc">Presencial, en el estudio.</p>
+          <a class="card-wa" id="wa-oral" href="https://wa.me/5493885800175" target="_blank" rel="noopener">Coordinar por WhatsApp <span class="arr" aria-hidden="true">→</span></a>
         </article>
         <article class="card">
           <span class="tag">8 UMA</span>
           <h3>Consulta escrita</h3>
           <div class="monto" id="monto-escrita">—</div>
           <p class="desc">Dictamen o informe firmado.</p>
+          <a class="card-wa" id="wa-escrita" href="https://wa.me/5493885800175" target="_blank" rel="noopener">Coordinar por WhatsApp <span class="arr" aria-hidden="true">→</span></a>
         </article>
       </div>
     </div>
@@ -584,11 +597,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
       <div class="doc-cta reveal">
         <p class="k">De las consultas</p>
         <h2>El arancel dice cuánto. La consulta dice <em>cómo</em>.</h2>
-        <p>Cuéntenos de qué se trata y le respondemos personalmente dentro de las 48 horas hábiles. La primera conversación, para saber si hay caso y por dónde empezar, no se cobra.</p>
+        <p>Escríbanos y le respondemos personalmente. La primera conversación, para saber si hay caso y por dónde empezar, no se cobra. Si prefiere leernos antes, <a href="/#articulos">acá está la doctrina</a>.</p>
         <div class="cta-actions">
-          <a class="btn btn-brass" href="/#contacto">Solicitar una consulta <span class="arr">→</span></a>
-          <a class="btn btn-ghost" href="/#articulos">Leer la doctrina</a>
+          <a class="btn btn-brass" id="wa-general" href="https://wa.me/5493885800175" target="_blank" rel="noopener">Escribir por WhatsApp <span class="arr">→</span></a>
+          <a class="btn btn-ghost" href="/#contacto">Enviar el formulario</a>
         </div>
+        <p class="cta-tel">O al <a id="wa-tel" href="https://wa.me/5493885800175" target="_blank" rel="noopener">+54 388 580-0175</a> · Lunes a viernes, de 9 a 18</p>
       </div>
     </div>
   </section>
@@ -649,11 +663,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 
   // ===================== Configuración =====================
   const TARIFAS = [
-    { id:'virtual', umas:4 },
-    { id:'oral',    umas:5 },
-    { id:'escrita', umas:8 },
+    { id:'virtual', umas:4, nombre:'consulta virtual' },
+    { id:'oral',    umas:5, nombre:'consulta oral' },
+    { id:'escrita', umas:8, nombre:'consulta escrita' },
   ];
   const UMA_FALLBACK = 53620;                 // valor de respaldo
+  // WhatsApp del estudio. Formato internacional para móviles argentinos: 54 + 9 + área + número.
+  const WA = '5493885800175';
   const CACHE_TTL_MS = 12 * 60 * 60 * 1000;   // 12 horas
   const SITE_URL = 'https://colabogadosjujuy.com.ar/';
   const GEMINI_MODEL = 'gemini-2.0-flash';
@@ -720,6 +736,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     const ds = Math.floor(hs / 24);
     return 'hace ' + ds + (ds === 1 ? ' día' : ' días');
   }
+
+  const waLink = (texto) => 'https://wa.me/' + WA + '?text=' + encodeURIComponent(texto);
 
   let toastTimer = null;
   function toast(msg){
@@ -866,7 +884,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
     if (state.valor != null && !state.loading) bumpValue();
 
     TARIFAS.forEach(t => {
-      $('monto-' + t.id).textContent = state.valor != null ? fmt(state.valor * t.umas) : '—';
+      const monto = state.valor != null ? fmt(state.valor * t.umas) : null;
+      $('monto-' + t.id).textContent = monto || '—';
+      // El mensaje lleva el monto que el visitante está viendo: llega la consulta
+      // ya encuadrada y sin la pregunta incómoda de por medio.
+      const wa = $('wa-' + t.id);
+      if (wa){
+        wa.href = waLink(monto
+          ? 'Hola. Vi en la web la ' + t.nombre + ' (' + monto + ') y quisiera coordinar una.'
+          : 'Hola. Quisiera coordinar una ' + t.nombre + '.');
+      }
     });
 
     renderHistory();
@@ -1243,6 +1270,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
   }
 
   // ===================== Inicio =====================
+  // Los enlaces de cada tarifa se arman en render(), con el monto a la vista.
+  ['wa-general','wa-tel'].forEach((id) => {
+    const el = $(id);
+    if (el) el.href = waLink('Hola. Quisiera hacer una consulta con el estudio.');
+  });
+
   refreshKeyStatus();
   renderHistory();
   loadServicios();
