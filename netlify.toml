@@ -37,3 +37,9 @@
   for = "/honorarios/*.png"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# La hoja de las páginas de materia no cambia seguido: que se cachee.
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

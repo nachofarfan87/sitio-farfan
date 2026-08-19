@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Farfán — Estudio Jurídico</title>
-<meta name="description" content="Estudio Jurídico Farfán. Tres generaciones de abogados desde 1953. Todas las especialidades del derecho bajo un mismo criterio: leer cada caso completo.">
+<title>Abogados en Jujuy — Estudio Jurídico Farfán | Desde 1953</title>
+<meta name="description" content="Abogados en Jujuy en todos los fueros: familia, laboral, penal, civil y comercial, contencioso administrativo, violencia de género y amparos de salud. Tres generaciones desde 1953. Honorarios publicados. Primera consulta sin cargo.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="author" content="Juan Ignacio Farfán">
+<meta name="geo.region" content="AR-Y">
+<meta name="geo.placename" content="San Salvador de Jujuy">
 <meta name="theme-color" content="#15251C">
 <link rel="canonical" href="https://estudiofarfan.netlify.app/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%2315251C'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Georgia,serif'%20font-size='40'%20fill='%23B08F4F'%20text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
@@ -13,69 +17,313 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Estudio Jurídico Farfán">
 <meta property="og:locale" content="es_AR">
-<meta property="og:title" content="Estudio Jurídico Farfán — Tres generaciones de derecho">
-<meta property="og:description" content="Estudio jurídico integral desde 1953. Todas las especialidades del derecho bajo un mismo criterio: leer cada caso completo.">
+<meta property="og:title" content="Abogados en Jujuy — Estudio Jurídico Farfán">
+<meta property="og:description" content="Estudio jurídico integral en Jujuy desde 1953. Los siete fueros de la provincia bajo un mismo criterio, con los honorarios publicados de antemano.">
 <meta property="og:url" content="https://estudiofarfan.netlify.app/">
 <meta property="og:image" content="https://estudiofarfan.netlify.app/og-farfan.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Estudio Jurídico Farfán — Tres generaciones de derecho">
-<meta name="twitter:description" content="Estudio jurídico integral desde 1953. Todas las materias del derecho bajo un mismo criterio.">
+<meta name="twitter:title" content="Abogados en Jujuy — Estudio Jurídico Farfán">
+<meta name="twitter:description" content="Estudio jurídico integral en Jujuy desde 1953. Los siete fueros de la provincia bajo un mismo criterio.">
 <meta name="twitter:image" content="https://estudiofarfan.netlify.app/og-farfan.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- Datos estructurados: estudio jurídico local (búsqueda en Jujuy) -->
+<!-- Datos estructurados: el estudio, el abogado y las siete materias.
+     Cuando exista la ficha de Google Business, agregar aquí dentro de
+     "#estudio" una clave "sameAs" con su URL y la de las redes. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "@id": "https://estudiofarfan.netlify.app/#estudio",
-  "name": "Estudio Jurídico Farfán",
-  "description": "Estudio jurídico integral en Jujuy desde 1953. Tres generaciones de abogados en todos los fueros de la provincia, bajo un mismo criterio: leer cada caso completo.",
-  "url": "https://estudiofarfan.netlify.app/",
-  "image": "https://estudiofarfan.netlify.app/og-farfan.jpg",
-  "foundingDate": "1953",
-  "founder": { "@type": "Person", "name": "Ciro Alberto Farfán" },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Carrizo N° 672",
-    "addressRegion": "Jujuy",
-    "addressCountry": "AR"
-  },
-  "areaServed": { "@type": "AdministrativeArea", "name": "Jujuy, Argentina" },
-  "telephone": "+543885800175",
-  "email": "juanignaciofarfan@gmail.com",
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-    "opens": "09:00",
-    "closes": "18:00"
-  }],
-  "employee": {
-    "@type": "Person",
-    "name": "Juan Ignacio Farfán",
-    "jobTitle": "Abogado",
-    "identifier": "M.P. 4692"
-  },
-  "knowsLanguage": "es-AR",
-  "knowsAbout": [
-    "Derecho de familia",
-    "Derecho civil y comercial",
-    "Derecho laboral",
-    "Derecho penal",
-    "Derecho contencioso administrativo",
-    "Violencia de género y familiar",
-    "Amparos de salud"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Arancel de honorarios",
-    "url": "https://estudiofarfan.netlify.app/honorarios/"
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://estudiofarfan.netlify.app/#website",
+      "url": "https://estudiofarfan.netlify.app/",
+      "name": "Estudio Jurídico Farfán",
+      "inLanguage": "es-AR",
+      "publisher": {
+        "@id": "https://estudiofarfan.netlify.app/#estudio"
+      }
+    },
+    {
+      "@type": [
+        "LegalService",
+        "Attorney"
+      ],
+      "@id": "https://estudiofarfan.netlify.app/#estudio",
+      "name": "Estudio Jurídico Farfán",
+      "alternateName": "Farfán Abogados",
+      "description": "Estudio jurídico integral en Jujuy desde 1953. Tres generaciones de abogados en los siete fueros de la provincia, bajo un mismo criterio: leer cada caso completo.",
+      "slogan": "Tres generaciones. Un mismo criterio.",
+      "url": "https://estudiofarfan.netlify.app/",
+      "image": "https://estudiofarfan.netlify.app/og-farfan.jpg",
+      "logo": "https://estudiofarfan.netlify.app/og-farfan.jpg",
+      "foundingDate": "1953",
+      "priceRange": "$$",
+      "currenciesAccepted": "ARS",
+      "founder": {
+        "@type": "Person",
+        "name": "Ciro Alberto Farfán"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrizo N° 672",
+        "addressLocality": "San Salvador de Jujuy",
+        "addressRegion": "Jujuy",
+        "postalCode": "4600",
+        "addressCountry": "AR"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Provincia de Jujuy, Argentina"
+        },
+        {
+          "@type": "City",
+          "name": "San Salvador de Jujuy"
+        },
+        {
+          "@type": "City",
+          "name": "Palpalá"
+        },
+        {
+          "@type": "City",
+          "name": "Perico"
+        },
+        {
+          "@type": "City",
+          "name": "El Carmen"
+        },
+        {
+          "@type": "City",
+          "name": "Monterrico"
+        },
+        {
+          "@type": "City",
+          "name": "San Pedro de Jujuy"
+        },
+        {
+          "@type": "City",
+          "name": "Libertador General San Martín"
+        },
+        {
+          "@type": "City",
+          "name": "Fraile Pintado"
+        },
+        {
+          "@type": "City",
+          "name": "Humahuaca"
+        },
+        {
+          "@type": "City",
+          "name": "Tilcara"
+        },
+        {
+          "@type": "City",
+          "name": "La Quiaca"
+        },
+        {
+          "@type": "City",
+          "name": "Abra Pampa"
+        }
+      ],
+      "telephone": "+543885800175",
+      "email": "juanignaciofarfan@gmail.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+543885800175",
+        "contactType": "customer service",
+        "areaServed": "AR",
+        "availableLanguage": [
+          "Spanish"
+        ]
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "employee": {
+        "@id": "https://estudiofarfan.netlify.app/#juan"
+      },
+      "knowsLanguage": "es-AR",
+      "knowsAbout": [
+        "Derecho de familia",
+        "Divorcio",
+        "Cuota alimentaria",
+        "Derecho civil y comercial",
+        "Sucesiones",
+        "Daños y perjuicios",
+        "Derecho laboral",
+        "Despido",
+        "Accidentes de trabajo",
+        "Derecho penal",
+        "Defensa penal",
+        "Derecho contencioso administrativo",
+        "Amparo por mora",
+        "Violencia de género y familiar",
+        "Medidas de protección",
+        "Amparos de salud"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Arancel de honorarios",
+        "url": "https://estudiofarfan.netlify.app/honorarios/",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "url": "https://estudiofarfan.netlify.app/materias/familia/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fuero de Familia",
+              "description": "Abogado de familia en Jujuy: divorcio, cuota alimentaria, cuidado personal y régimen comunicacional.",
+              "url": "https://estudiofarfan.netlify.app/materias/familia/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://estudiofarfan.netlify.app/materias/civil-y-comercial/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fuero Civil y Comercial",
+              "description": "Sucesiones, daños y perjuicios, desalojos, escrituración, usucapión y juicios ejecutivos.",
+              "url": "https://estudiofarfan.netlify.app/materias/civil-y-comercial/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://estudiofarfan.netlify.app/materias/laboral/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fuero Laboral",
+              "description": "Despidos, trabajo no registrado, diferencias salariales y accidentes de trabajo.",
+              "url": "https://estudiofarfan.netlify.app/materias/laboral/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://estudiofarfan.netlify.app/materias/penal/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fuero Penal",
+              "description": "Defensa penal desde la primera diligencia hasta el juicio oral, y representación de la víctima como querellante.",
+              "url": "https://estudiofarfan.netlify.app/materias/penal/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://estudiofarfan.netlify.app/materias/contencioso-administrativo/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Contencioso Administrativo",
+              "description": "Amparos, recursos y demandas contra la administración provincial y municipal.",
+              "url": "https://estudiofarfan.netlify.app/materias/contencioso-administrativo/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://estudiofarfan.netlify.app/materias/violencia-de-genero/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Violencia de Género y Familiar",
+              "description": "Medidas de protección urgentes: exclusión del hogar, prohibición de acercamiento y botón antipánico.",
+              "url": "https://estudiofarfan.netlify.app/materias/violencia-de-genero/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://estudiofarfan.netlify.app/materias/contratos-y-amparos-de-salud/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Contratos, denuncias y amparos de salud",
+              "description": "Amparo de salud contra obra social o prepaga, contratos, cartas documento y denuncias.",
+              "url": "https://estudiofarfan.netlify.app/materias/contratos-y-amparos-de-salud/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": [
+        "Person",
+        "Attorney"
+      ],
+      "@id": "https://estudiofarfan.netlify.app/#juan",
+      "name": "Juan Ignacio Farfán",
+      "jobTitle": "Abogado",
+      "identifier": "M.P. 4692",
+      "worksFor": {
+        "@id": "https://estudiofarfan.netlify.app/#estudio"
+      },
+      "knowsLanguage": "es-AR",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Provincia de Jujuy, Argentina"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://estudiofarfan.netlify.app/#materias-lista",
+      "name": "Índice de materias del Estudio Jurídico Farfán",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Fuero de Familia",
+          "url": "https://estudiofarfan.netlify.app/materias/familia/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Fuero Civil y Comercial",
+          "url": "https://estudiofarfan.netlify.app/materias/civil-y-comercial/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fuero Laboral",
+          "url": "https://estudiofarfan.netlify.app/materias/laboral/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Fuero Penal",
+          "url": "https://estudiofarfan.netlify.app/materias/penal/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Contencioso Administrativo",
+          "url": "https://estudiofarfan.netlify.app/materias/contencioso-administrativo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Violencia de Género y Familiar",
+          "url": "https://estudiofarfan.netlify.app/materias/violencia-de-genero/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Contratos, denuncias y amparos de salud",
+          "url": "https://estudiofarfan.netlify.app/materias/contratos-y-amparos-de-salud/"
+        }
+      ]
+    }
+  ]
 }
 </script>
 
@@ -354,6 +602,10 @@ a{color:inherit;text-decoration:none}
 .titulo:hover .titulo-consult{color:var(--brass-ink)}
 .titulo:hover .titulo-consult .arr{transform:translateX(4px)}
 .titulo-links{align-self:center;display:grid;gap:.55rem;justify-items:end}
+.titulo-name a{color:inherit;transition:color .25s var(--ease)}
+.titulo:hover .titulo-name a,.titulo-name a:hover{color:var(--brass-ink)}
+.titulo-consult.ver{color:var(--ink);font-weight:500;border-bottom:1px solid var(--ink);padding-bottom:.15rem}
+.titulo-consult.ver:hover{color:var(--brass-ink);border-bottom-color:var(--brass)}
 .titulo-consult.tarifa{color:var(--brass-ink);border-bottom:1px solid var(--brass-line);padding-bottom:.15rem}
 .titulo-consult.tarifa:hover{border-bottom-color:var(--brass)}
 .materias-nota{
@@ -676,13 +928,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     <div class="hero-grain" aria-hidden="true"></div>
     <div class="wrap">
       <div class="hero-frame">
-        <p class="hero-kicker">Estudio jurídico integral · Desde 1953</p>
+        <p class="hero-kicker">Estudio jurídico integral en Jujuy · Desde 1953</p>
         <h1 class="hero-title">
           <span class="line"><span>Tres generaciones.</span></span>
           <span class="line"><span>Un mismo <em>criterio.</em></span></span>
         </h1>
         <p class="hero-firm">Estudio Jurídico Farfán</p>
-        <p class="hero-sub">Bajo el mismo apellido y el mismo criterio: leer cada caso completo, sin perder de vista el resto.</p>
+        <p class="hero-sub">Abogados en Jujuy en los siete fueros de la provincia. Bajo el mismo apellido y el mismo criterio: leer cada caso completo, sin perder de vista el resto.</p>
         <div class="hero-actions">
           <a class="btn btn-brass" href="#contacto">Solicitar una consulta <span class="arr">→</span></a>
           <a class="btn btn-ghost" href="#materias">Ver las materias</a>
@@ -818,17 +1070,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       </div>
       <div class="codex-body">
         <h2 class="section-head reveal">Índice de materias.</h2>
-        <p class="intro-lead reveal" style="margin-top:1.4rem;font-size:1.2rem;max-width:46ch;color:var(--text-soft)">Siete títulos, los siete fueros en los que se litiga en la provincia. Una misma forma de trabajar. Recorra las materias como se recorre un código.</p>
+        <p class="intro-lead reveal" style="margin-top:1.4rem;font-size:1.2rem;max-width:46ch;color:var(--text-soft)">Siete títulos, los siete fueros en los que se litiga en Jujuy. Cada uno tiene su página, con los trámites que comprende, cómo se trabaja y las preguntas que más nos hacen.</p>
 
         <ol class="codex-list">
           <li class="titulo reveal">
             <span class="titulo-num" aria-hidden="true">I</span>
             <div class="titulo-text">
-              <h3 class="titulo-name">Fuero de Familia</h3>
+              <h3 class="titulo-name"><a href="/materias/familia/">Fuero de Familia</a></h3>
               <p class="titulo-desc">El derecho que toca la vida de todos los días. Se resuelve mejor cuanto antes se ordena, y casi siempre conviene ordenarlo sin llegar al estrado.</p>
               <p class="titulo-arts">Divorcio · Alimentos · Cuidado personal · Régimen comunicacional · Adopción · Filiación · Autorización de viaje</p>
             </div>
             <div class="titulo-links">
+              <a class="titulo-consult ver" href="/materias/familia/">Abogado de familia en Jujuy <span class="arr">→</span></a>
               <a class="titulo-consult tarifa" href="/honorarios/#area-familia">Honorarios <span class="arr">→</span></a>
               <a class="titulo-consult" href="#contacto">Consultar <span class="arr">→</span></a>
             </div>
@@ -836,11 +1089,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <li class="titulo reveal">
             <span class="titulo-num" aria-hidden="true">II</span>
             <div class="titulo-text">
-              <h3 class="titulo-name">Fuero Civil y Comercial</h3>
+              <h3 class="titulo-name"><a href="/materias/civil-y-comercial/">Fuero Civil y Comercial</a></h3>
               <p class="titulo-desc">Donde se dirime casi todo lo patrimonial: lo que se firmó, lo que se heredó, lo que se dañó y lo que se debe.</p>
               <p class="titulo-arts">Sucesiones y declaratoria de herederos · Daños y perjuicios · Desalojos · Escrituración · Prescripción adquisitiva · División de condominio · Juicio ejecutivo · Concursos y quiebras</p>
             </div>
             <div class="titulo-links">
+              <a class="titulo-consult ver" href="/materias/civil-y-comercial/">Abogado civil y comercial en Jujuy <span class="arr">→</span></a>
               <a class="titulo-consult tarifa" href="/honorarios/#area-civil">Honorarios <span class="arr">→</span></a>
               <a class="titulo-consult" href="#contacto">Consultar <span class="arr">→</span></a>
             </div>
@@ -848,11 +1102,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <li class="titulo reveal">
             <span class="titulo-num" aria-hidden="true">III</span>
             <div class="titulo-text">
-              <h3 class="titulo-name">Fuero Laboral</h3>
+              <h3 class="titulo-name"><a href="/materias/laboral/">Fuero Laboral</a></h3>
               <p class="titulo-desc">Relaciones de trabajo, de la intimación previa a la audiencia de vista de causa. Del lado del trabajador o del empleador, pero nunca de los dos.</p>
               <p class="titulo-arts">Demanda y contestación · Audiencia de vista de causa · Acuerdos transaccionales · Tutela sindical · Recurso de inconstitucionalidad</p>
             </div>
             <div class="titulo-links">
+              <a class="titulo-consult ver" href="/materias/laboral/">Abogado laboral en Jujuy <span class="arr">→</span></a>
               <a class="titulo-consult tarifa" href="/honorarios/#area-laboral">Honorarios <span class="arr">→</span></a>
               <a class="titulo-consult" href="#contacto">Consultar <span class="arr">→</span></a>
             </div>
@@ -860,11 +1115,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <li class="titulo reveal">
             <span class="titulo-num" aria-hidden="true">IV</span>
             <div class="titulo-text">
-              <h3 class="titulo-name">Fuero Penal</h3>
+              <h3 class="titulo-name"><a href="/materias/penal/">Fuero Penal</a></h3>
               <p class="titulo-desc">Defensa desde la primera diligencia policial hasta el último recurso, con reserva absoluta. La hora en que se llama al abogado cambia el caso.</p>
               <p class="titulo-arts">Defensa en juicio oral · Cese de detención · Juicio abreviado · Suspensión de juicio a prueba · Mediación penal · Habeas corpus · Ejecución de la pena</p>
             </div>
             <div class="titulo-links">
+              <a class="titulo-consult ver" href="/materias/penal/">Abogado penalista en Jujuy <span class="arr">→</span></a>
               <a class="titulo-consult tarifa" href="/honorarios/#area-penal">Honorarios <span class="arr">→</span></a>
               <a class="titulo-consult" href="#contacto">Consultar <span class="arr">→</span></a>
             </div>
@@ -872,11 +1128,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <li class="titulo reveal">
             <span class="titulo-num" aria-hidden="true">V</span>
             <div class="titulo-text">
-              <h3 class="titulo-name">Contencioso Administrativo</h3>
+              <h3 class="titulo-name"><a href="/materias/contencioso-administrativo/">Contencioso Administrativo</a></h3>
               <p class="titulo-desc">El ciudadano frente al Estado. Materia fundacional de esta casa: el Código Procesal Administrativo de la provincia lo redactó, entre otros, quien abrió el estudio.</p>
               <p class="titulo-arts">Amparo por mora · Amparo genérico y de derechos colectivos · Mandamus · Recurso de revocatoria · Casación · Recurso extraordinario federal</p>
             </div>
             <div class="titulo-links">
+              <a class="titulo-consult ver" href="/materias/contencioso-administrativo/">Contencioso administrativo en Jujuy <span class="arr">→</span></a>
               <a class="titulo-consult tarifa" href="/honorarios/#area-contencioso">Honorarios <span class="arr">→</span></a>
               <a class="titulo-consult" href="#contacto">Consultar <span class="arr">→</span></a>
             </div>
@@ -884,11 +1141,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <li class="titulo reveal">
             <span class="titulo-num" aria-hidden="true">VI</span>
             <div class="titulo-text">
-              <h3 class="titulo-name">Violencia de Género y Familiar</h3>
+              <h3 class="titulo-name"><a href="/materias/violencia-de-genero/">Violencia de Género y Familiar</a></h3>
               <p class="titulo-desc">Medidas de protección con la urgencia que el caso exige y el cuidado que la persona merece. Se atiende en el día.</p>
               <p class="titulo-arts">Protección de persona · Exclusión del hogar · Amparo · Audiencia de violencia familiar</p>
             </div>
             <div class="titulo-links">
+              <a class="titulo-consult ver" href="/materias/violencia-de-genero/">Violencia de género en Jujuy <span class="arr">→</span></a>
               <a class="titulo-consult tarifa" href="/honorarios/#area-genero">Honorarios <span class="arr">→</span></a>
               <a class="titulo-consult" href="#contacto">Consultar <span class="arr">→</span></a>
             </div>
@@ -896,11 +1154,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
           <li class="titulo reveal">
             <span class="titulo-num" aria-hidden="true">VII</span>
             <div class="titulo-text">
-              <h3 class="titulo-name">Contratos, denuncias y amparos de salud</h3>
+              <h3 class="titulo-name"><a href="/materias/contratos-y-amparos-de-salud/">Contratos, denuncias y amparos de salud</a></h3>
               <p class="titulo-desc">Lo que se resuelve fuera del expediente, o antes de que el expediente exista. Incluye el reclamo contra la obra social que niega una prestación.</p>
               <p class="titulo-arts">Locación · Boleto de compraventa · Estatutos · Carta documento · Denuncia penal · Información sumaria · Amparo de salud</p>
             </div>
             <div class="titulo-links">
+              <a class="titulo-consult ver" href="/materias/contratos-y-amparos-de-salud/">Amparos de salud en Jujuy <span class="arr">→</span></a>
               <a class="titulo-consult tarifa" href="/honorarios/#area-contratos">Honorarios <span class="arr">→</span></a>
               <a class="titulo-consult" href="#contacto">Consultar <span class="arr">→</span></a>
             </div>
@@ -1006,11 +1265,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
       </div>
       <nav class="foot-col" aria-label="Materias">
         <h4>Materias</h4>
-        <a href="#materias">Familia</a>
-        <a href="#materias">Civil y Comercial</a>
-        <a href="#materias">Laboral</a>
-        <a href="#materias">Penal</a>
-        <a href="#materias">Contencioso Administrativo</a>
+        <a href="/materias/familia/">Familia</a>
+        <a href="/materias/civil-y-comercial/">Civil y Comercial</a>
+        <a href="/materias/laboral/">Laboral</a>
+        <a href="/materias/penal/">Penal</a>
+        <a href="/materias/contencioso-administrativo/">Contencioso Administrativo</a>
+        <a href="/materias/violencia-de-genero/">Violencia de Género y Familiar</a>
+        <a href="/materias/contratos-y-amparos-de-salud/">Contratos y amparos de salud</a>
       </nav>
       <nav class="foot-col" aria-label="El estudio">
         <h4>El estudio</h4>

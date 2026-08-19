@@ -1,4 +1,21 @@
 User-agent: *
 Allow: /
 
+# Rastreadores de los buscadores con IA: se los deja entrar a propósito.
+# Que el estudio sea citado como fuente vale tanto como aparecer en Google.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://estudiofarfan.netlify.app/sitemap.xml
