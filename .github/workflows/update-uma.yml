@@ -1,9 +1,17 @@
 name: Actualizar UMA
 
+# La corrida diaria está apagada desde el 19-ago-2026. El sitio se migró a
+# Astro en el repo nachofarfan87/estudiofarfan, que tiene su propia copia de
+# este workflow apuntando a public/honorarios/uma.json. Además los despliegues
+# de Netlify de ESTE sitio están pausados, así que actualizar uma.json acá no
+# cambiaba nada publicado: sólo acumulaba commits.
+#
+# Para reactivarla —si el sitio viejo vuelve a publicar antes que el nuevo—
+# alcanza con descomentar las dos líneas de `schedule`.
 on:
-  schedule:
-    - cron: '0 12 * * *'   # todos los días ~09:00 (hora Argentina, UTC-3)
-  workflow_dispatch:        # permite ejecutarlo a mano desde la pestaña Actions
+  # schedule:
+  #   - cron: '0 12 * * *'   # todos los días ~09:00 (hora Argentina, UTC-3)
+  workflow_dispatch:        # queda el disparo manual desde la pestaña Actions
 
 permissions:
   contents: write
